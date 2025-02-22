@@ -22,8 +22,5 @@
       "source": "/(.*)",
       "destination": "/frontend/index.html"
     }
-  ],
-  "env": {
-    "API_KEY": "@API_KEY"
-  }
+  ]
 }
