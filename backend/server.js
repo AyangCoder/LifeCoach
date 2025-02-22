@@ -46,7 +46,7 @@ app.post('/api/chat', async (req, res) => {
         'Authorization': `Bearer ${process.env.API_KEY}`
       },
       body: JSON.stringify({
-        model: 'deepseek-r1-250120',
+        model: 'ep-20250215234034-fc2h9',
         messages,
         temperature: 0.6,
         stream: true
