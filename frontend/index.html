@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Coach AI - 你的个人成长助手</title>
+    <!-- Material UI 字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!-- Material UI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@mui/material@latest/dist/mui.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header class="header">
+            <div class="mui-paper mui-elevation-2">
+                <h1>Life Coach AI</h1>
+                <p>你的个人成长助手</p>
+            </div>
+        </header>
+
+        <!-- 聊天区域 -->
+        <main class="chat-container mui-paper mui-elevation-3">
+            <!-- 消息显示区域 -->
+            <div class="messages" id="messages">
+                <!-- 欢迎消息 -->
+                <div class="message ai">
+                    <div class="message-content mui-paper mui-elevation-1">
+                        <p>你好！我是你的AI生活教练。我会通过对话了解你，为你提供个性化的建议和指导。让我们开始吧！</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="input-container mui-paper mui-elevation-1">
+                <div class="mui-textfield mui-textfield--float-label">
+                    <textarea
+                        id="userInput"
+                        placeholder="输入你的问题或想法..."
+                        rows="3"
+                        class="mui-textfield__input"
+                        autofocus
+                    ></textarea>
+                </div>
+                <button id="sendButton" class="mui-btn mui-btn--primary mui-btn--raised">
+                    <span class="material-icons">send</span>
+                    发送
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Material UI JavaScript -->
+    <script src="https://unpkg.com/@mui/material@latest/dist/mui.min.js"></script>
+    <!-- App JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
