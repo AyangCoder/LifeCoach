@@ -17,8 +17,17 @@
         <!-- 头部区域 -->
         <header class="header">
             <div class="mui-paper mui-elevation-2">
-                <h1>Life Coach AI</h1>
-                <p>你的个人成长助手</p>
+                <h1>Life Coach AI - 你的个人成长助手</h1>
+                <div class="nav-buttons">
+                    <button id="historyButton" class="mui-btn mui-btn--primary">
+                        <span class="material-icons">history</span>
+                        历史对话
+                    </button>
+                    <button id="newChatButton" class="mui-btn mui-btn--accent">
+                        <span class="material-icons">add_circle</span>
+                        新对话
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -28,7 +37,8 @@
             <div class="messages" id="messages">
                 <!-- 欢迎消息 -->
                 <div class="message ai">
-                    <div class="message-content mui-paper mui-elevation-1">
+                    <div class="avatar">AI</div>
+                    <div class="message-content">
                         <p>你好！我是你的AI生活教练。我会通过对话了解你，为你提供个性化的建议和指导。让我们开始吧！</p>
                     </div>
                 </div>
@@ -36,19 +46,31 @@
 
             <!-- 输入区域 -->
             <div class="input-container mui-paper mui-elevation-1">
-                <div class="mui-textfield mui-textfield--float-label">
-                    <textarea
-                        id="userInput"
-                        placeholder="输入你的问题或想法..."
-                        rows="3"
-                        class="mui-textfield__input"
-                        autofocus
-                    ></textarea>
+                <div class="input-tools">
+                    <button class="tool-btn">
+                        <span class="material-icons">sentiment_satisfied_alt</span>
+                    </button>
+                    <button class="tool-btn">
+                        <span class="material-icons">folder</span>
+                    </button>
+                    <button class="tool-btn">
+                        <span class="material-icons">content_cut</span>
+                    </button>
                 </div>
-                <button id="sendButton" class="mui-btn mui-btn--primary mui-btn--raised">
-                    <span class="material-icons">send</span>
-                    发送
-                </button>
+                <div class="input-box">
+                    <div class="mui-textfield mui-textfield--float-label">
+                        <textarea
+                            id="userInput"
+                            placeholder="输入你的问题或想法..."
+                            rows="1"
+                            class="mui-textfield__input"
+                            autofocus
+                        ></textarea>
+                    </div>
+                    <button id="sendButton" class="mui-btn mui-btn--primary mui-btn--raised">
+                        <span class="material-icons">send</span>
+                    </button>
+                </div>
             </div>
         </main>
     </div>
