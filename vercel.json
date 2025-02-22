@@ -26,6 +26,12 @@
       "dest": "frontend/index.html"
     }
   ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
   "env": {
     "API_KEY": "@api_key"
   }
