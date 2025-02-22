@@ -7,6 +7,18 @@
 
 Life Coach AI 是一个基于 DeepSeek R1 API 开发的智能生活教练对话系统。通过自然语言交互，为用户提供个性化的生活建议、职业规划和个人成长指导。系统采用流式响应技术，提供流畅的实时对话体验。
 
+## 🎁 活动福利
+
+**火山引擎 DeepSeek 满血版免费领取活动！**
+
+- 🎯 活动内容：邀请好友注册并使用，双方最高可获得145元代金券
+- 💰 奖励叠加：多邀多得，上不封顶
+- 🚀 免费额度：高达3625万tokens，畅享R1与V3模型
+- 🔗 活动链接：[立即领取](https://www.volcengine.com/experience/ark?utm_term=202502dsinvite&ac=DSASUQY5&rc=QKFTRDAP)
+- 📋 邀请码：`QKFTRDAP`
+
+![火山引擎活动二维码](https://p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfe75f2c4a694e9e9c79f0ed7ea0cffc~tplv-49unhts6dw-image.image)
+
 ## 功能特性
 
 - 🤖 智能对话：基于先进的 DeepSeek R1 模型
