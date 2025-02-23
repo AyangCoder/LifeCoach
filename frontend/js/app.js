@@ -20,10 +20,16 @@ function saveChat(chatId, message, isUser) {
     if (!chats[chatId]) {
         chats[chatId] = [];
     }
+    // 获取当前对话的最后一条消息的时间戳
+    const lastMessage = chats[chatId][chats[chatId].length - 1];
+    const timestamp = lastMessage 
+        ? Math.max(lastMessage.timestamp + 1, Date.now()) // 确保时间戳递增
+        : Date.now();
+    
     chats[chatId].push({
         content: message,
         isUser,
-        timestamp: Date.now()
+        timestamp
     });
     localStorage.setItem('chats', JSON.stringify(chats));
     updateHistoryList();
@@ -90,7 +96,8 @@ function updateHistoryList() {
 // 加载历史对话
 function loadChat(chatId) {
     const chats = JSON.parse(localStorage.getItem('chats') || '{}');
-    const messages = chats[chatId] || [];
+    // 对消息按时间戳进行排序
+    const messages = (chats[chatId] || []).sort((a, b) => a.timestamp - b.timestamp);
     
     // 清空当前对话
     messagesContainer.innerHTML = '';
@@ -135,9 +142,6 @@ function loadChat(chatId) {
             lastTimestamp = currentTime;
         }
     });
-    
-    // 隐藏历史列表
-    historyList.classList.remove('show');
     
     // 滚动到最新消息
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -323,4 +327,17 @@ userInput.addEventListener('keypress', (e) => {
 // 页面加载完成后初始化历史对话列表
 document.addEventListener('DOMContentLoaded', () => {
     updateHistoryList();
+});
+
+// 添加点击历史列表外部区域关闭列表的事件处理
+document.addEventListener('click', (e) => {
+    // 如果点击的不是历史列表内部元素，也不是历史按钮，则关闭历史列表
+    if (!historyList.contains(e.target) && e.target !== historyButton && historyList.classList.contains('show')) {
+        historyList.classList.remove('show');
+    }
+});
+
+// 阻止历史列表内部点击事件冒泡
+historyList.addEventListener('click', (e) => {
+    e.stopPropagation();
 });
